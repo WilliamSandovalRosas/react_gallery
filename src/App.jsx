@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Gallery_card } from './componentes/Gallery_card'
+import { Gallery_container } from './componentes/Gallery_container';
 //import './App.css'
 
 
@@ -39,22 +40,15 @@ function App() {
         
           <div className="row" style={{width:"100%",justifyContent:"space-around"}}>
             
-            {cards.map((card)=>{
-                return(
-                  <Gallery_card
-                  key = {card.id}
-                  name = {card.name}
-                  role= {card.role}
-                  image = {card.image}
-                  />
-                );
-                
-              })
-            }
+            
+
+            <Gallery_container cards={cards} setCards={setCards}/> 
             
           </div>
                
       </div>
+
+      
      
     
   )
